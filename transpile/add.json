@@ -1,0 +1,42 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "add"
+      },
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "x"
+        },
+        {
+          "type": "Identifier",
+          "name": "y"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "x"
+              },
+              "operator": "+",
+              "right": {
+                "type": "Identifier",
+                "name": "y"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

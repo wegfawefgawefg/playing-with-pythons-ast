@@ -1,0 +1,56 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "abs_value"
+      },
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "x"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "IfStatement",
+            "test": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "x"
+              },
+              "operator": "<",
+              "right": {
+                "type": "Literal",
+                "value": 0
+              }
+            },
+            "consequent": {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "UnaryExpression",
+                "operator": "-",
+                "argument": {
+                  "type": "Identifier",
+                  "name": "x"
+                }
+              }
+            },
+            "alternate": {
+              "type": "ReturnStatement",
+              "argument": {
+                "type": "Identifier",
+                "name": "x"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

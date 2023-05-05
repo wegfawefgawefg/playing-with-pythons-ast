@@ -1,0 +1,80 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "outer_function"
+      },
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "x"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "FunctionDeclaration",
+            "id": {
+              "type": "Identifier",
+              "name": "inner_function"
+            },
+            "params": [
+              {
+                "type": "Identifier",
+                "name": "y"
+              }
+            ],
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ReturnStatement",
+                  "argument": {
+                    "type": "BinaryExpression",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "x"
+                    },
+                    "operator": "*",
+                    "right": {
+                      "type": "Identifier",
+                      "name": "y"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "inner_function"
+              },
+              "arguments": [
+                {
+                  "type": "BinaryExpression",
+                  "left": {
+                    "type": "Identifier",
+                    "name": "x"
+                  },
+                  "operator": "+",
+                  "right": {
+                    "type": "Literal",
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

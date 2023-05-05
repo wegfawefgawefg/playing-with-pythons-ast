@@ -1,0 +1,34 @@
+const escodegen = require("escodegen");
+let js_ast = {
+  type: "Program",
+  body: [
+    {
+      type: "CallExpression",
+      callee: { type: "Identifier", name: "console.log" },
+      arguments: [{ type: "Literal", value: 1 }],
+    },
+  ],
+};
+
+let larger_ast = {
+  type: "Program",
+  body: [
+    {
+      type: "FunctionDeclaration",
+      id: { type: "Identifier", name: "printtest" },
+      params: [],
+      body: {
+        type: "BlockStatement",
+        body: [
+          {
+            type: "CallExpression",
+            callee: { type: "Identifier", name: "console.log" },
+            arguments: [{ type: "Literal", value: 1 }],
+          },
+        ],
+      },
+    },
+  ],
+};
+let p = escodegen.generate(larger_ast);
+console.log(p);

@@ -1,0 +1,12 @@
+memoization - auto_caching
+call execution times / runtime analytics
+optimizer - constant folding
+graph view of your code / live debug with member introspection
+transpiler
+unpiler?? AST -> code (component of transpiler) / autoreformatting
+syntax highlighting - generate a pretty version of ur code
+hyperlink to and from code?? (how to hook into vscode / editor)
+convert python directly to transistor logic (timeing involved, so transpile to known hdl)
+
+impracticle:
+    convert python to a visual programming language

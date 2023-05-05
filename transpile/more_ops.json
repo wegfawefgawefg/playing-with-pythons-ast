@@ -1,0 +1,50 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "more_ops"
+      },
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "x"
+        },
+        {
+          "type": "Identifier",
+          "name": "y"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "BinaryExpression",
+              "left": {
+                "type": "Identifier",
+                "name": "x"
+              },
+              "operator": "+",
+              "right": {
+                "type": "BinaryExpression",
+                "left": {
+                  "type": "Identifier",
+                  "name": "y"
+                },
+                "operator": "*",
+                "right": {
+                  "type": "Literal",
+                  "value": 2
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
